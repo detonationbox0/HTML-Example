@@ -6,14 +6,37 @@
     <title>My Website</title>
     <style>
       /* CSS */
+
+        #blue-text {
+            color:blue;
+        }
+
+
     </style>
   </head>
   <body>
       <h1>It's a website!</h1>
+      <h2>Does CSS work?</h2>
+      <p id="blue-text">Yes, it does. For I am blue. I wouldn't be blue if CSS didn't work.</p>
+
+      <h2>Does JavaScript work?</h2>
+      <p>Click this button to find out:</p>
+      <button id="js-button" onclick="btnClicked()">Does JavaScript work?</button>
+
+      <h2 class="jq-text">What about jQuery?</h2>
+      <p class="jq-text">Click this button to find out:</p>
+      <button id="jq-button" class="jq-text">Does jQuery work?</button>
   <!-- HTML -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
   <script>
     // JavaScript w/ jQuery
+    function btnClicked() {
+        alert("Yes, JavaScript works!");
+    }
+
+    $("#jq-button").on("click", function() {
+        $(".jq-text").text("Yes, jQuery works!");
+    })
   </script>
   </body>
 </html>
